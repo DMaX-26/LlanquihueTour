@@ -59,7 +59,7 @@ public class Main {
                     r.registrar();
                 }
             }
-            //Llamada del metodo buscarPorIdioma, que filtra los guías turísticos por idiomas
+            //Llamada del metodo buscarPorIdioma, que filtra los guías turísticos por su idioma
             gestorDatos.buscarPorIdioma("español");
             //Llamada del metodo buscarPorNacionalidad, que filtra los clientes por su nacionalidad
             gestorDatos.buscarPorNacionalidad("chilena");
