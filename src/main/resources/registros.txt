@@ -1,0 +1,16 @@
+DIRECCION;Avenida Carrera 123;Quilpue
+DIRECCION;Calle Venecia 098;Viña del Mar
+GUIA;Catalina Rivera;18433912-3;c.r@gmail.com;912442203;31;español
+GUIA;Eduardo Martinez;17521917-7;e.m@gmail.com;912239044;33;español-ingles
+GUIA;Victor Diaz;20491730-5;v.d@gmail.com;999214520;25;español-ingles
+
+PROVEEDOR_TRANSPORTE;Omega;76123421-5;contacto@omega.com;+56223456789;Bus;Avenida Carrera 123;Quilpue
+PROVEEDOR_ALOJAMIENTO;Marina Hotel;77432090-3;contacto@marinahotel.com;961234567;185000;Calle Venecia 098;Viña del Mar
+
+TOUR;Ruta del queso;Gastronomico;Puerto Varas;50000
+TOUR;Ruta del vino;Gastronomico;Valdivia;65000
+TOUR;Ruta histórica de Frutillar;Tour cultural;Frutillar;70000
+
+CLIENTE;Facundo Gonzalez;15990324-9;f.g@gmail.com;952311340;37;chilena;Catalina Rivera;18433912-3;c.r@gmail.com;912442203;31;español/ingles
+
+RESERVA;1;17-07-2026;1;Facundo Gonzalez;15990324-9;f.g@gmail.com;952311340;37;chilena;Catalina Rivera;18433912-3;c.r@gmail.com;912442203;31;español/ingles;Ruta histórica de Frutillar;Tour cultural;Frutillar;70000
