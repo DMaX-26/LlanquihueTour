@@ -30,28 +30,38 @@ public class Main {
                     guia.mostrarDatos();
                     guia.registrar();
                 }
+                //Si cada elemento del recorrido es de tipo Cliente
                 if (r instanceof Cliente){
-                    Cliente cliente = (Cliente) r;
+                    Cliente cliente = (Cliente) r;//Se trata como a un Cliente
+                    //cliente llama a los metodos mostrarDatos y registrar
                     cliente.mostrarDatos();
                     cliente.registrar();
                 }
+                //Si cada elemento del recorrido es de tipo ProveedorTransporte
                 if (r instanceof ProveedorTransporte){
-                    ProveedorTransporte proveedorTransporte = (ProveedorTransporte) r;
+                    ProveedorTransporte proveedorTransporte = (ProveedorTransporte) r;//Se trata como a un ProveedorTransporte
+                    //proveedorTransporte llama a los metodos mostrarDatos y registrar
                     proveedorTransporte.mostrarDatos();
                     proveedorTransporte.registrar();
                 }
+                //Si cada elemento del recorrido es de tipo ProveedorAlojamiento
                 if (r instanceof ProveedorAlojamiento){
-                    ProveedorAlojamiento proveedorAlojamiento = (ProveedorAlojamiento) r;
+                    ProveedorAlojamiento proveedorAlojamiento = (ProveedorAlojamiento) r;//Se trata como a un ProveedorAlojamiento
+                    //proveedorAlojamiento llama a los metodos mostrarDatos y registrar
                     proveedorAlojamiento.mostrarDatos();
                     proveedorAlojamiento.registrar();
                 }
+                //Si cada elemento del recorrido es de tipo Reserva
                 if (r instanceof Reserva){
-                    Reserva reserva = (Reserva) r;
+                    Reserva reserva = (Reserva) r;//Se trata como a una Reserva
+                    //reserva llama a los metodos mostrarDatos y registrar
                     r.mostrarDatos();
                     r.registrar();
                 }
             }
+            //Llamada del metodo buscarPorIdioma, que filtra los guías turísticos por idiomas
             gestorDatos.buscarPorIdioma("español");
+            //Llamada del metodo buscarPorNacionalidad, que filtra los clientes por su nacionalidad
             gestorDatos.buscarPorNacionalidad("chilena");
 
         } catch (RutInvalidoException e) {
