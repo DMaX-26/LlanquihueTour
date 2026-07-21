@@ -2,9 +2,17 @@ package com.llanquihuetour.model;
 
 import com.llanquihuetour.exception.RutInvalidoException;
 
+/**
+ * Clase que representa a un rut
+ */
 public class Rut {
     private String numeroRut;
 
+    /**
+     * Constructor para crear los objetos e inicializar sus atributos
+     * @param numeroRut
+     * @throws RutInvalidoException
+     */
     public Rut(String numeroRut) throws RutInvalidoException {
         /**
          * Si el numeroRut no coincide con el formato
@@ -24,6 +32,10 @@ public class Rut {
         this.numeroRut = numeroRut;
     }
 
+    /**
+     * Conversion de la clase Rut a una representación textual
+     * @return
+     */
     @Override
     public String toString() {
         return numeroRut;
