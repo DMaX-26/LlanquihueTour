@@ -1,12 +1,13 @@
 package com.llanquihuetour.model;
 
-import com.llanquihuetour.interfaces.Registrable;
+import com.llanquihuetour.exception.PrecioInvalidoException;
 
 /**
  * Subclase que representa a un Proveedor de alojamiento
- * Hereda atributos y métodos de la superclase Persona
+ * Hereda atributos, métodos e implementaciones de la superclase Persona
+ * Implementa la interfaz Registrable
  */
-public class ProveedorAlojamiento extends Persona implements Registrable {
+public class ProveedorAlojamiento extends Persona {
     /**
      * Atributos propios
      */
@@ -22,8 +23,16 @@ public class ProveedorAlojamiento extends Persona implements Registrable {
      * @param precioPorNoche
      * @param direccion
      */
-    public ProveedorAlojamiento(String nombre, Rut rut, String correo, String telefono, double precioPorNoche, Direccion direccion) {
+    public ProveedorAlojamiento(String nombre, Rut rut, String correo, String telefono, double precioPorNoche, Direccion direccion) throws PrecioInvalidoException {
         super(nombre, rut, correo, telefono);
+
+        /**
+         * Se valida que el precio por noche sea un valor correcto antes de inicializar su atributo
+         */
+        if (precioPorNoche < 0){
+            //Se lanza una excepción personalizada
+            throw new PrecioInvalidoException("El precio por noche ingresado no es válido");
+        }
         this.precioPorNoche = precioPorNoche;
         this.direccion = direccion;
     }
