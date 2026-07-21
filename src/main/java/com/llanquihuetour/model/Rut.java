@@ -24,10 +24,13 @@ public class Rut {
         this.numeroRut = numeroRut;
     }
 
+    /**
+     * Metodos getter and setter
+     * @return
+     */
     public String getNumeroRut() {
         return numeroRut;
     }
-
     public void setNumeroRut(String numeroRut) {
         this.numeroRut = numeroRut;
     }
