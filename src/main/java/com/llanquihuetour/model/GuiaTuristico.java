@@ -1,13 +1,13 @@
 package com.llanquihuetour.model;
 
-import com.llanquihuetour.interfaces.Registrable;
+import com.llanquihuetour.exception.EdadInvalidaException;
 
 /**
  * Subclase que representa a un Guía turístico
- * Hereda atributos y métodos de la superclase "Persona"
+ * Hereda atributos, métodos e implementaciones de la superclase "Persona"
  * Implementa la interfaz Registrable
  */
-public class GuiaTuristico extends Persona implements Registrable {
+public class GuiaTuristico extends Persona {
     /**
      * Atributos propios
      */
@@ -23,12 +23,23 @@ public class GuiaTuristico extends Persona implements Registrable {
      * @param edad
      * @param idiomas
      */
-    public GuiaTuristico(String nombre, Rut rut, String correo, String telefono, int edad, String idiomas) {
+    public GuiaTuristico(String nombre, Rut rut, String correo, String telefono, int edad, String idiomas) throws EdadInvalidaException {
         super(nombre, rut, correo, telefono);
+
+        /**
+         * Si la edad del GuiaTuristico es menor que 0, se lanza una excepción personalizada
+         */
+        if (edad<0){
+            throw new EdadInvalidaException("La edad ingresada no es válida");
+        }
         this.edad = edad;
         this.idiomas = idiomas;
     }
 
+    /**
+     * Métodos getter and setter
+     * @return
+     */
     public int getEdad() {
         return edad;
     }
