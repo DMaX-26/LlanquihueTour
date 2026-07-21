@@ -1,12 +1,11 @@
 package com.llanquihuetour.model;
 
-import com.llanquihuetour.interfaces.Registrable;
-
 /**
  * Subclase Clase que representa a un Proveedor de transporte
- * Hereda atributos y métodos de la superclase "Persona"
+ * Hereda atributos, métodos e implementaciones de la superclase "Persona"
+ * Implementa la interfaz Registrable
  */
-public class ProveedorTransporte extends Persona implements Registrable {
+public class ProveedorTransporte extends Persona {
     /**
      * Atributos propios
      * ProveedorTransporte tiene una dirección
@@ -35,6 +34,10 @@ public class ProveedorTransporte extends Persona implements Registrable {
         this.direccion = direccion;
     }
 
+    /**
+     * Métodos getter and setter
+     * @return
+     */
     public String getTipoTransporte() {
         return tipoTransporte;
     }
