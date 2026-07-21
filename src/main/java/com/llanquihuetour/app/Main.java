@@ -21,43 +21,11 @@ public class Main {
             //gestorDatos llama al metodo crearRegistros y los guarda en una variable de tipo List<Registrable>
             List<Registrable> registrables = gestorDatos.crearRegistros();
 
-            //For each para recorrer la lista registrables
+            //For each para recorrer la lista "registrables"
             for (Registrable r : registrables){
-                //Si el recorrido es de tipo "GuiaTuristico"
-                if (r instanceof GuiaTuristico){
-                    GuiaTuristico guia = (GuiaTuristico) r;//Trata a "r" como un GuiaTuristico y cada elemento se guarda en la variable guia de tipo GuiaTuristico
-                    //guia llama a los metodos mostrarDatos y registrar
-                    guia.mostrarDatos();
-                    guia.registrar();
-                }
-                //Si cada elemento del recorrido es de tipo Cliente
-                if (r instanceof Cliente){
-                    Cliente cliente = (Cliente) r;//Se trata como a un Cliente
-                    //cliente llama a los metodos mostrarDatos y registrar
-                    cliente.mostrarDatos();
-                    cliente.registrar();
-                }
-                //Si cada elemento del recorrido es de tipo ProveedorTransporte
-                if (r instanceof ProveedorTransporte){
-                    ProveedorTransporte proveedorTransporte = (ProveedorTransporte) r;//Se trata como a un ProveedorTransporte
-                    //proveedorTransporte llama a los metodos mostrarDatos y registrar
-                    proveedorTransporte.mostrarDatos();
-                    proveedorTransporte.registrar();
-                }
-                //Si cada elemento del recorrido es de tipo ProveedorAlojamiento
-                if (r instanceof ProveedorAlojamiento){
-                    ProveedorAlojamiento proveedorAlojamiento = (ProveedorAlojamiento) r;//Se trata como a un ProveedorAlojamiento
-                    //proveedorAlojamiento llama a los metodos mostrarDatos y registrar
-                    proveedorAlojamiento.mostrarDatos();
-                    proveedorAlojamiento.registrar();
-                }
-                //Si cada elemento del recorrido es de tipo Reserva
-                if (r instanceof Reserva){
-                    Reserva reserva = (Reserva) r;//Se trata como a una Reserva
-                    //reserva llama a los metodos mostrarDatos y registrar
-                    r.mostrarDatos();
-                    r.registrar();
-                }
+                //"r" llama al los métodos mostrarDatos y registrar, correspondientes a cada clase que implemente la interfaz "Registrable"
+                r.mostrarDatos();
+                r.registrar();
             }
             //Llamada del metodo buscarPorIdioma, que filtra los guías turísticos por su idioma
             gestorDatos.buscarPorIdioma("español");
