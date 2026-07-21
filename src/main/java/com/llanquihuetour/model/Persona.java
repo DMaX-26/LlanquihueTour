@@ -50,7 +50,6 @@ public abstract class Persona implements Registrable {
 
     @Override
     public void registrar() {
-        System.out.println("");
     }
 
     @Override
