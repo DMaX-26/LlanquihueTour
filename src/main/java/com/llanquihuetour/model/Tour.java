@@ -1,5 +1,7 @@
 package com.llanquihuetour.model;
 
+import com.llanquihuetour.exception.PrecioInvalidoException;
+
 /**
  * Clase que representa a un Tour
  * Posee los atributos: nombre, tipoTour, destino y precio
@@ -12,15 +14,26 @@ public class Tour {
 
     /**
      * Constructor para crear los objetos e inicializar sus atributos
+     * Puede lanzar una excepción
      * @param nombre
      * @param tipoTour
      * @param destino
      * @param precio
      */
-    public Tour(String nombre, String tipoTour, String destino, double precio) {
+    public Tour(String nombre, String tipoTour, String destino, double precio) throws PrecioInvalidoException {
         this.nombre = nombre;
         this.tipoTour = tipoTour;
         this.destino = destino;
+
+        /**
+         * Se valida que el precio ingresado sea correcto
+         */
+        if (precio < 0){
+            /**
+             * Se lanza una excepción personalizada
+             */
+            throw new PrecioInvalidoException("El precio ingresado no es válido");
+        }
         this.precio = precio;
     }
 
