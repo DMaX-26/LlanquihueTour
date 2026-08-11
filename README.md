@@ -13,11 +13,14 @@ Sede: Sede Online
 
 Este proyecto corresponde a la Evaluación final Transversal de la asignatura Desarrollo Orientado a Objetos I. Consiste en el desarrollo de un sistema para la agencia de turismo Llanquihue Tour, el cual permite cargar información desde un archivo txt, incluyendo datos de reservas, tours, proveedores de alojamiento y transporte, clientes y guías turísticos.
 
-Este proyecto implementa las clases Direccion, Rut, Persona, GuiaTuristico, ProveedorTransporte, ProveedorAlojamiento, Tour, Reserva y una interfaz Registrable que define un método común que debe ser implementado por todas las clases que la utilizan.
+El proyecto implementa las clases Direccion, Rut, Persona, GuiaTuristico, ProveedorTransporte, ProveedorAlojamiento, Tour, Reserva y una interfaz Registrable que define un método común que debe ser implementado por todas las clases que la utilizan.
 
 Para administrar estos datos, se crea la clase GestorDatos, responsable de recopilar toda la información dentro del archivo txt y de crear instancias de cada clase que implementa la interfaz Registrable y almacenarlas en una colección para su posterior gestión.
 
+Además, se implementa una interfaz de usuario cuyo propósito es facilitar el registro y la gestión de información relacionada con guías turísticos, clientes, proveedores de transporte y alojamiento, tours y reservas.
+
 El proyecto fue desarrollado a partir de un caso contextualizado, abordando problemáticas reales y proponiendo una solución estructurada, modular y reutilizable.
+
 
 🧱 Estructura general del proyecto
 ```text
