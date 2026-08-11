@@ -100,7 +100,9 @@ public class gui extends JFrame {
                  */
                 String[] partes = linea.split(";");
 
-                //Se evalúa si partes[0] es un GUIA, CLIENTE, PROVEEDOR_TRANSPORTE, PROVEEDOR_ALOJAMIENTO, RESERVA O TOUR.
+                /**
+                 * Se evalúa si partes[0] es un GUIA, CLIENTE, PROVEEDOR_TRANSPORTE, PROVEEDOR_ALOJAMIENTO, RESERVA O TOUR.
+                 */
                 switch (partes[0]){
                     /**
                      * Validamos si el dato en la posición 0 es un "GUIA"
