@@ -22,8 +22,8 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 🧱 Estructura general del proyecto
 ```text
 📁 src/
-├── app/         # Clase principal con el método main
-├── model/       # Clases de dominio (Direccion, Rut, Persona, GuiaTuristico, Cliente, ProveedorTransporte, ProveedorAlojamiento, Tour, Reserva, GestorDatos)
+├── app/         # Clase principal con el método main e interfaz de usuario
+├── model/       # Clases de dominio (Direccion, Rut, Persona, GuiaTuristico, Cliente, ProveedorTransporte, ProveedorAlojamiento, Tour, Reserva)
 ├── exception/   # Excepciones personalizadas (EdadInvalidaException, PrecioInvalidoException, RutInvalidoException, CantidadPersonasInvalidaException)
 ├── data/        # Gestión y acceso de datos (GestorDatos)
 └── interfaces/  # Interfaces que definen contratos y comportamientos comunes implementados por las clases del sistema (Registrable)
